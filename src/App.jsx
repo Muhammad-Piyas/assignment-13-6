@@ -3,12 +3,14 @@ import Counter from "./components/banner/Counter";
 import Footer from "./components/footer/Footer";
 import Ready from "./components/footer/Ready";
 import Navbar from "./components/navbar/Navbar";
+import Get from "./components/two-section/Get";
 function App() {
   return (
     <>
       <Navbar></Navbar>
       <Banner></Banner>
       <Counter></Counter>
+      <Get></Get>
       <Ready></Ready>
       <Footer></Footer>
     </>

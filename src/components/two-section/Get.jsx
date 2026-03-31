@@ -1,37 +1,73 @@
-import React from "react";
-// এখানে আপনার পছন্দমতো আইকন বা ইমেজ ইম্পোর্ট করুন
+import userIcon from "../../assets/user.png";
+import packageIcon from "../../assets/package.png";
 import rocketIcon from "../../assets/rocket.png";
 
-const Card = () => {
+const Get = () => {
+  const steps = [
+    {
+      id: "01",
+      title: "Create Account",
+      description:
+        "Sign up for free in seconds. No credit card required to get started.",
+      icon: userIcon,
+    },
+    {
+      id: "02",
+      title: "Choose Products",
+      description:
+        "Browse our catalog and select the tools that fit your needs.",
+      icon: packageIcon,
+    },
+    {
+      id: "03",
+      title: "Start Creating",
+      description: "Download and start using your premium tools immediately.",
+      icon: rocketIcon,
+    },
+  ];
+
   return (
-    <div className="p-10 bg-gray-50 flex justify-center">
-      {/* মেইন কার্ড */}
-      <div className="max-w-sm bg-white rounded-3xl shadow-sm border border-gray-100 p-8 hover:shadow-xl transition-all duration-300 group">
-        {/* আইকন বা ইমেজ সেকশন */}
-        <div className="w-16 h-16 bg-[#F5F0FF] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-          <img
-            src={rocketIcon}
-            alt="Icon"
-            className="w-10 h-10 object-contain"
-          />
+    <section className="py-20 bg-[#F9FAFB]">
+      <div className="container mx-auto px-4 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#101727] mb-4">
+            Get Started In 3 Steps
+          </h2>
+          <p className="text-gray-500 text-lg">
+            Start using premium digital tools in minutes, not hours.
+          </p>
         </div>
 
-        {/* টেক্সট কন্টেন্ট */}
-        <h3 className="text-2xl font-bold text-[#101727] mb-3">
-          Fast Integration
-        </h3>
-        <p className="text-gray-500 leading-relaxed mb-6">
-          Connect our tools with your existing workflow in minutes. Simple,
-          powerful, and easy to use for everyone.
-        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {steps.map((step) => (
+            <div
+              key={step.id}
+              className="relative bg-white p-10 rounded-3xl shadow-sm border border-gray-100 flex flex-col items-center text-center group hover:shadow-md transition-all duration-300"
+            >
+              <div className="absolute top-6 right-6 w-8 h-8 rounded-full bg-[#8133FF] text-white flex items-center justify-center text-xs font-bold shadow-lg">
+                {step.id}
+              </div>
 
-        {/* অ্যাকশন বাটন বা লিংক */}
-        <button className="text-[#8133FF] font-semibold flex items-center gap-2 hover:gap-3 transition-all">
-          Learn More <span>→</span>
-        </button>
+              <div className="w-24 h-24 bg-[#F5F0FF] rounded-full flex items-center justify-center mb-8 group-hover:scale-105 transition-transform duration-300">
+                <img
+                  src={step.icon}
+                  alt={step.title}
+                  className="w-12 h-12 object-contain"
+                />
+              </div>
+
+              <h3 className="text-2xl font-bold text-[#101727] mb-4">
+                {step.title}
+              </h3>
+              <p className="text-gray-500 text-base leading-relaxed">
+                {step.description}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Card;
+export default Get;
