@@ -4,6 +4,7 @@ import Footer from "./components/footer/Footer";
 import Ready from "./components/footer/Ready";
 import Navbar from "./components/navbar/Navbar";
 import Get from "./components/two-section/Get";
+import Simple from "./components/two-section/Simple";
 function App() {
   return (
     <>
@@ -11,6 +12,7 @@ function App() {
       <Banner></Banner>
       <Counter></Counter>
       <Get></Get>
+      <Simple></Simple>
       <Ready></Ready>
       <Footer></Footer>
     </>

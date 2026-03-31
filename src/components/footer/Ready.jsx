@@ -6,7 +6,7 @@ const Ready = () => {
           Ready To Transform Your Workflow?
         </h2>
 
-        <p className="text-white/90 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+        <p className="text-white/90 text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
           Join thousands of professionals who are already using Digitools to
           work smarter. Start your free trial today.
         </p>

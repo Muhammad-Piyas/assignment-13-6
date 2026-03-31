@@ -33,7 +33,7 @@ const Get = () => {
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#101727] mb-4">
             Get Started In 3 Steps
           </h2>
-          <p className="text-gray-500 text-lg">
+          <p className="text-gray-500 text-base">
             Start using premium digital tools in minutes, not hours.
           </p>
         </div>
