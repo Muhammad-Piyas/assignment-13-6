@@ -2,7 +2,7 @@ const Ready = () => {
   return (
     <div className="bg-gradient-to-r from-[#8133FF] to-[#AD1DFF] py-20 px-4">
       <div className="container mx-auto  px-6 text-center text-white ">
-        <h2 className="text-3xl md:text-4xl font-extrabold mb-6">
+        <h2 className="text-3xl md:text-5xl font-extrabold mb-6">
           Ready To Transform Your Workflow?
         </h2>
 

@@ -30,7 +30,7 @@ const Get = () => {
     <section className="py-20 bg-[#F9FAFB]">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#101727] mb-4">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-[#101727] mb-4">
             Get Started In 3 Steps
           </h2>
           <p className="text-gray-500 text-base">

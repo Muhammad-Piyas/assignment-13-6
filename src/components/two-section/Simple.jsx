@@ -51,7 +51,7 @@ const Simple = () => {
     <section className="py-20 bg-gray-50/30">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#101727] mb-4">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-[#101727] mb-4">
             Simple, Transparent Pricing
           </h2>
           <p className="text-gray-500 text-base">

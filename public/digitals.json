@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "name": "AI Writing Pro",
+    "description": "Generate high-quality blogs, ads, and content instantly using AI.",
+    "price": 29,
+    "period": "monthly",
+    "tag": "Best Seller",
+    "tagType": "best seller",
+    "features": ["Unlimited AI content", "50+ templates", "Grammar checker"],
+    "icon": "✍️"
+  },
+  {
+    "id": 2,
+    "name": "Design Templates Pack",
+    "description": "Access thousands of ready-made templates for design projects.",
+    "price": 49,
+    "period": "one-time",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": ["2000+ templates", "Monthly updates", "Commercial license"],
+    "icon": "🎨"
+  },
+  {
+    "id": 3,
+    "name": "Premium Stock Assets",
+    "description": "Download royalty-free images, videos, and graphics.",
+    "price": 19,
+    "period": "monthly",
+    "tag": "New",
+    "tagType": "new",
+    "features": ["10M+ assets", "No attribution", "Commercial use"],
+    "icon": "📷"
+  },
+  {
+    "id": 4,
+    "name": "Automation Toolkit",
+    "description": "Automate repetitive tasks and boost productivity.",
+    "price": 79,
+    "period": "monthly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": ["50+ automations", "API access", "Custom workflows"],
+    "icon": "⚙️"
+  },
+  {
+    "id": 5,
+    "name": "Resume Builder Pro",
+    "description": "Build ATS-friendly resumes and cover letters easily.",
+    "price": 15,
+    "period": "one-time",
+    "tag": "New",
+    "tagType": "new",
+    "features": ["100+ templates", "ATS optimization", "PDF export"],
+    "icon": "📄"
+  },
+  {
+    "id": 6,
+    "name": "Social Media Content Kit",
+    "description": "Create engaging content for all social platforms.",
+    "price": 39,
+    "period": "monthly",
+    "tag": "Best Seller",
+    "tagType": "best seller",
+    "features": ["5000+ assets", "Post scheduler", "Analytics dashboard"],
+    "icon": "📱"
+  },
+  {
+    "id": 7,
+    "name": "Portfolio Builder",
+    "description": "Design stunning personal portfolios with ease.",
+    "price": 12,
+    "period": "monthly",
+    "tag": "New",
+    "tagType": "new",
+    "features": ["Custom domains", "Drag & drop", "Responsive design"],
+    "icon": "🌐"
+  },
+  {
+    "id": 8,
+    "name": "Freelancer Toolkit",
+    "description": "Manage clients, invoices, and projects efficiently.",
+    "price": 59,
+    "period": "yearly",
+    "tag": "Best Seller",
+    "tagType": "best seller",
+    "features": ["Invoice generator", "Client tracking", "Project management"],
+    "icon": "💼"
+  },
+  {
+    "id": 9,
+    "name": "Email Marketing Pro",
+    "description": "Create and manage email campaigns with high conversion rates.",
+    "price": 25,
+    "period": "monthly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": ["Email templates", "Automation", "Analytics reports"],
+    "icon": "📧"
+  }
+]
