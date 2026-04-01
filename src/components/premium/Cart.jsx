@@ -1,10 +1,6 @@
-import React from "react";
-
 const Cart = ({ carts, setCarts }) => {
-  // Calculate total price
   const totalPrice = carts.reduce((sum, item) => sum + item.price, 0);
 
-  // Function to remove item from cart
   const handleRemove = (id) => {
     const updatedCart = carts.filter((item) => item.id !== id);
     setCarts(updatedCart);
@@ -21,7 +17,6 @@ const Cart = ({ carts, setCarts }) => {
           </div>
         ) : (
           <div className="space-y-4">
-            {/* Cart Items List */}
             {carts.map((item) => (
               <div
                 key={item.id}
@@ -48,7 +43,6 @@ const Cart = ({ carts, setCarts }) => {
               </div>
             ))}
 
-            {/* Summary Section */}
             <div className="pt-8 mt-4 border-t border-gray-100">
               <div className="flex justify-between items-center mb-8">
                 <span className="text-gray-500 font-medium text-lg">
