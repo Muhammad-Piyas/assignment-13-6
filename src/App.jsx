@@ -5,7 +5,7 @@ import Ready from "./components/footer/Ready";
 import Navbar from "./components/navbar/Navbar";
 import Get from "./components/two-section/Get";
 import Simple from "./components/two-section/Simple";
-import Digitals from "./components/premium/Digitals";
+import Products from "./components/premium/Products";
 
 const getDigitals = async () => {
   const res = await fetch("/digitals.json");
@@ -20,7 +20,7 @@ function App() {
       <Navbar></Navbar>
       <Banner></Banner>
       <Counter></Counter>
-      <Digitals digitalPromise={digitalPromise}></Digitals>
+      <Products digitalPromise={digitalPromise}></Products>
       <Get></Get>
       <Simple></Simple>
       <Ready></Ready>
