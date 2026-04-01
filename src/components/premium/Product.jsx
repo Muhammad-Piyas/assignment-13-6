@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 
-const Product = ({ digital }) => {
+const Product = ({ digital, carts, setCarts }) => {
   const [isCart, setCart] = useState(false);
 
   const handleCart = () => {
     setCart(true);
+    setCarts([...carts, digital]);
   };
   return (
     <div

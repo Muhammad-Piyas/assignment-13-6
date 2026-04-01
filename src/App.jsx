@@ -7,6 +7,8 @@ import Get from "./components/two-section/Get";
 import Simple from "./components/two-section/Simple";
 import Products from "./components/premium/Products";
 import Text from "./components/premium/Text";
+import Cart from "./components/premium/Cart";
+import { useState } from "react";
 
 const getDigitals = async () => {
   const res = await fetch("/digitals.json");
@@ -16,6 +18,10 @@ const getDigitals = async () => {
 const digitalPromise = getDigitals();
 
 function App() {
+  const [activeTab, setActiveTab] = useState("product");
+  const [carts, setCarts] = useState([]);
+  console.log(carts);
+
   return (
     <>
       <Navbar></Navbar>
@@ -28,22 +34,31 @@ function App() {
           {/* Products Tab */}
           <input
             type="radio"
-            name="tab_toggle" // Same name for both
+            name="tab_toggle"
             className="tab !rounded-full !h-12 px-8 text-base font-bold checked:!bg-[#8133FF] checked:!text-white !text-[#8133FF] transition-all"
             aria-label="Products"
+            onClick={() => setActiveTab("product")}
             defaultChecked
           />
 
           {/* Cart Tab */}
           <input
             type="radio"
-            name="tab_toggle" // Same name for both
+            name="tab_toggle"
             className="tab !rounded-full !h-12 px-8 text-base font-bold checked:!bg-[#8133FF] checked:!text-white !text-[#8133FF] transition-all"
             aria-label="Cart (0)"
+            onClick={() => setActiveTab("cart")}
           />
         </div>
       </div>
-      <Products digitalPromise={digitalPromise}></Products>
+      {activeTab === "product" && (
+        <Products
+          digitalPromise={digitalPromise}
+          carts={carts}
+          setCarts={setCarts}
+        ></Products>
+      )}
+      {activeTab === "cart" && <Cart carts={carts}></Cart>}
       <Get></Get>
       <Simple></Simple>
       <Ready></Ready>
