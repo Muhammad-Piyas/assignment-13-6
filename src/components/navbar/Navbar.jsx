@@ -1,103 +1,90 @@
-import React from "react";
+import { HiOutlineShoppingCart, HiMenuAlt3 } from "react-icons/hi";
 
-const Navbar = () => {
+const Navbar = ({ cartCount }) => {
   return (
-    <div className="bg-base-100 shadow-sm">
-      <div className="navbar container mx-auto  py-4">
-        {/* Navbar Start: Mobile Menu + Logo */}
+    <div className="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50">
+      <div className="navbar container mx-auto px-4 py-2 lg:py-4">
+        {/* Navbar Start: Logo + Mobile Menu */}
         <div className="navbar-start">
           <div className="dropdown">
-            <div
+            <label
               tabIndex={0}
               role="button"
-              className="btn btn-ghost lg:hidden p-0 mr-2"
+              className="btn btn-ghost lg:hidden p-0 mr-3 text-[#8133FF]"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </div>
+              <HiMenuAlt3 className="text-2xl" />{" "}
+            </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-medium"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-4 shadow-2xl bg-white rounded-2xl w-64 font-semibold text-[#101727] gap-2 border border-gray-100"
             >
               <li>
-                <a>Products</a>
+                <a className="hover:text-[#8133FF]">Products</a>
               </li>
               <li>
-                <a>Features</a>
+                <a className="hover:text-[#8133FF]">Features</a>
               </li>
               <li>
-                <a>Pricing</a>
+                <a className="hover:text-[#8133FF]">Pricing</a>
               </li>
               <li>
-                <a>Testimonials</a>
+                <a className="hover:text-[#8133FF]">Testimonials</a>
               </li>
               <li>
-                <a>FAQ</a>
+                <a className="hover:text-[#8133FF]">FAQ</a>
+              </li>
+              <div className="divider my-1"></div>
+              <li>
+                <a className="text-[#8133FF]">Login</a>
               </li>
             </ul>
           </div>
-          <a className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#8133FF] to-[#AD1DFF] bg-clip-text text-transparent cursor-pointer hover:opacity-90">
+
+          <a className="text-xl md:text-2xl lg:text-3xl font-black bg-gradient-to-r from-[#8133FF] to-[#AD1DFF] bg-clip-text text-transparent cursor-pointer tracking-tight">
             DigiTools
           </a>
         </div>
 
-        {/* Navbar Center: Desktop Only */}
+        {/* Navbar Center: Desktop Links (Hidden on Mobile) */}
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 gap-4 font-medium text-base-content/70">
+          <ul className="menu menu-horizontal px-1 gap-6 font-semibold text-[#101727]/70">
             <li>
-              <a>Products</a>
+              <a className="hover:text-[#8133FF] transition-colors">Products</a>
             </li>
             <li>
-              <a>Features</a>
+              <a className="hover:text-[#8133FF] transition-colors">Features</a>
             </li>
             <li>
-              <a>Pricing</a>
+              <a className="hover:text-[#8133FF] transition-colors">Pricing</a>
             </li>
             <li>
-              <a>Testimonials</a>
+              <a className="hover:text-[#8133FF] transition-colors">
+                Testimonials
+              </a>
             </li>
             <li>
-              <a>FAQ</a>
+              <a className="hover:text-[#8133FF] transition-colors">FAQ</a>
             </li>
           </ul>
         </div>
 
-        {/* Navbar End: Icons + Button */}
-        <div className="navbar-end gap-2 lg:gap-6">
-          <button className="btn btn-ghost btn-circle btn-sm">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-              />
-            </svg>
-          </button>
+        <div className="navbar-end gap-3 md:gap-6">
+          <div className="indicator cursor-pointer group">
+            {cartCount > 0 && (
+              <span className="indicator-item badge badge-sm bg-[#AD1DFF] text-white border-white font-bold p-2 w-5 h-5 text-[10px] animate-bounce">
+                {cartCount}
+              </span>
+            )}
+            <button className="btn btn-ghost btn-circle btn-sm md:btn-md hover:bg-purple-50 transition-colors">
+              <HiOutlineShoppingCart className="text-2xl md:text-3xl text-[#8133FF] group-hover:scale-110 transition-transform" />
+            </button>
+          </div>
 
-          <a className="link link-hover font-medium hidden sm:inline-block">
+          <a className="link link-hover font-bold hidden lg:inline-block text-[#101727] hover:text-[#8133FF]">
             Login
           </a>
 
-          <button className="btn btn-sm lg:btn-md border-none bg-gradient-to-r from-[#8133FF] to-[#AD1DFF] hover:opacity-90 rounded-full px-4 lg:px-8 text-white">
+          <button className="btn btn-xs sm:btn-sm lg:btn-md border-none bg-gradient-to-r from-[#8133FF] to-[#AD1DFF] hover:shadow-lg hover:shadow-purple-200 transition-all rounded-full px-4 lg:px-8 text-white font-bold text-[10px] sm:text-xs lg:text-sm">
             Get Started
           </button>
         </div>

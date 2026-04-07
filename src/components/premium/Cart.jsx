@@ -1,9 +1,17 @@
+import { FaOpencart } from "react-icons/fa";
+import { toast } from "react-toastify";
 const Cart = ({ carts, setCarts }) => {
   const totalPrice = carts.reduce((sum, item) => sum + item.price, 0);
 
-  const handleRemove = (id) => {
-    const updatedCart = carts.filter((item) => item.id !== id);
-    setCarts(updatedCart);
+  const handlePayment = () => {
+    setCarts([]);
+    toast.success("Payment Successful");
+  };
+
+  const handleRemove = (item) => {
+    const filteredArray = carts.filter((c) => c.id !== item.id);
+    setCarts(filteredArray);
+    toast.warn("Removed from cart");
   };
 
   return (
@@ -13,6 +21,9 @@ const Cart = ({ carts, setCarts }) => {
 
         {carts.length === 0 ? (
           <div className="text-center py-10 text-gray-500">
+            <span className="flex justify-center text-4xl pb-2 ">
+              <FaOpencart />
+            </span>
             Your cart is currently empty.
           </div>
         ) : (
@@ -35,7 +46,7 @@ const Cart = ({ carts, setCarts }) => {
                 </div>
 
                 <button
-                  onClick={() => handleRemove(item.id)}
+                  onClick={() => handleRemove(item)}
                   className="text-red-500 hover:text-red-600 font-semibold text-sm transition-colors"
                 >
                   Remove
@@ -53,7 +64,10 @@ const Cart = ({ carts, setCarts }) => {
                 </span>
               </div>
 
-              <button className="w-full py-4 bg-[#8133FF] text-white font-bold rounded-2xl hover:opacity-90 transition-opacity shadow-lg shadow-purple-100">
+              <button
+                onClick={handlePayment}
+                className="w-full py-4 bg-[#8133FF] text-white font-bold rounded-2xl hover:opacity-90 transition-opacity shadow-lg shadow-purple-100"
+              >
                 Proceed To Checkout
               </button>
             </div>
